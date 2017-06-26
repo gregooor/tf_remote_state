@@ -18,9 +18,9 @@ resource "aws_s3_bucket" "remote_state" {
 
 resource "aws_dynamodb_table" "tf_lock_table" {
   name           = "${var.prefix}-remote-state-${var.environment}-lock"
-  read_capacity  = 20
-  write_capacity = 20
-  hash_key       = "LockId"
+  read_capacity  = 5
+  write_capacity = 5
+  hash_key       = "LockID"
 
   attribute {
     name = "LockId"
