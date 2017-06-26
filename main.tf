@@ -23,7 +23,7 @@ resource "aws_dynamodb_table" "tf_lock_table" {
   hash_key       = "LockID"
 
   attribute {
-    name = "LockId"
+    name = "LockID"
     type = "S"
   }
 
